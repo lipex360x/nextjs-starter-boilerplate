@@ -4,7 +4,13 @@ export default <Config>{
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.ts(x)?'],
+  collectCoverageFrom: [
+    'src/**/*.ts(x)?',
+    '!**/node_modules/**',
+    '!<rootDir>/src/**/index.{ts,tsx}',
+    '!<rootDir>/src/app/**',
+    '!<rootDir>/src/lib/**',
+  ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/'],
   transform: {
