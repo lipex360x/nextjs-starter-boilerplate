@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 
 import StyledComponentsRegistry from '@/lib/registry'
 import { cn } from '@/lib/utils'
+import { Providers } from '@/providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <body className={cn(inter.className)}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <Providers>{children}</Providers>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
