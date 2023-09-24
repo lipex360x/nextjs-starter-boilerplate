@@ -8,6 +8,7 @@ export default <Config>{
     'src/**/*.ts(x)?',
     '!**/node_modules/**',
     '!<rootDir>/src/**/index.{ts,tsx}',
+    '!<rootDir>/src/**/*.stories.tsx',
     '!<rootDir>/src/app/**',
     '!<rootDir>/src/lib/**',
     '!<rootDir>/src/types/**',

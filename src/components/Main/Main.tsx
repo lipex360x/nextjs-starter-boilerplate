@@ -1,4 +1,4 @@
-import * as S from './styles'
+import * as S from './Main.styles'
 
 export const Main: React.FC<{ title?: string }> = ({
   title = 'NextJS Boilerplate Starter',

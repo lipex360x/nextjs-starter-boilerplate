@@ -1,0 +1,13 @@
+import { render, screen } from '@testing-library/react'
+
+import { {{ pascalCase componentName }} } from '.'
+
+describe('<{{ pascalCase componentName }}>', () => {
+  it('should render the component heading', () => {
+    render(<{{ pascalCase componentName }} />)
+
+    expect(
+      screen.getByText(/hello {{ componentName }}/i, { selector: 'span' }),
+    ).toBeInTheDocument()
+  })
+})
